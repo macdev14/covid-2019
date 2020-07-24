@@ -1,0 +1,89 @@
+#topo {
+    margin: 300px 200px 0px 200px;
+    display: flex;
+    flex-direction: column;
+    columns: 4;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+#topo img {
+    margin-bottom: 30px;
+}
+#topo h2 {
+    color: #bf3737;
+}
+
+#topo p {
+    margin: 30px 0 30px 0;
+    font-size: 20px;
+}
+
+#sintomas {
+    width: 100%;
+    height: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    columns: 2;
+
+    align-items: center;
+
+    text-align: center;
+
+    background-color: #a02c2a;
+    -webkit-box-shadow: 0px -10px 13px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -10px 13px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -10px 13px 0px rgba(0,0,0,0.75);
+}
+
+#sintomas h1 {
+    color: white;
+
+    font-size: 50px;
+    text-shadow: 0px 9px 10px rgba(0, 0, 0, 0.5);
+
+    padding: 50px 0 50px 0;
+}
+
+#sintomas #items-box {
+    height: 800px;
+    width: 1550px;
+    
+    background-color: #f0f0f5;
+
+    border-radius: 8px;
+
+    -webkit-box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.75);
+}
+
+#sintomas #items-box h2 {
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+}
+
+#sintomas #items-box #items-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 200px;
+}
+
+#sintomas #items-box #items-grid li { 
+    list-style: none;
+
+    height: 180px;
+
+    padding: 32px 24px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
