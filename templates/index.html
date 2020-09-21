@@ -1,44 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coronavírus</title>
-    <link rel="stylesheet" href="../style/main.css">
-    <link rel="stylesheet" href="../style/home.css">
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/all.css">
-</head>
-<body>
-    <nav class="nav">
-        <div class="nav-menu flex-row">
-            <div class="nav-brand">
-                <a href="#" class="texto-cinza">Projeto</a>
-            </div>
-            <div class="toggle-collapse">
-                <div class="toggle-icons">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-            <div>
-                <ul class="nav-itens">
-                    <li class="nav-link">
-                       <a href="#corona">Home</a> 
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">Gráficos</a>    
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">Quem somos</a>    
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+{% extends 'layout.html' %}
+    {% block body %}
     <!----------- Inicio da Página ---------->
     <div id="inicio">
-        <a name="corona"> <img src="../assets/corona.png" alt="Coronavírus" id="coronavirus" width="200px"/></a>
+        <a name="corona"> <img src="{{ url_for('static', filename='assets/corona.png') }}" alt="Coronavírus" id="coronavirus" width="200px"/></a>
         <h2>CORONAVÍRUS</h2>
         <p class="cor">
             O Coronavírus, causador da pandemia global, pertence a uma família de vírus (CoV) que já circula no Brasil. 
@@ -51,7 +15,7 @@
         <!---------- Botões das Informações ---------->
         <div id="botoes-grid">
             <li>
-                <img src="../assets/pain.png" alt="Sintomas" width="100px">
+                <img src="{{ url_for('static', filename='assets/pain.png') }}" alt="Sintomas" width="100px">
                     <span>    
                         <h2>SINTOMAS</h2>
                         <p>Veja quais são os sintomas causados pela Covid-19.</p>
@@ -60,7 +24,7 @@
             </li>
 
             <li>
-                <img src="../assets/spread.png" alt="Contágio" width="100px">
+                <img src="{{ url_for('static', filename='assets/spread.png') }}" alt="Contágio" width="100px">
                 <span> 
                     <h2>CONTÁGIO</h2>
                     <p>Conheça as formas de contágio do novo coronavírus.</p>
@@ -69,7 +33,7 @@
             </li>
             
             <li>
-                <img src="../assets/protection.png" alt="Prevenção" width="100px">
+                <img src="{{ url_for('static', filename='assets/protection.png') }}" alt="Prevenção" width="100px">
                 <span> 
                     <h2>PREVENÇÃO</h2>
                     <p>Descubra maneiras de se prevenir contra o vírus.</p>
@@ -88,17 +52,17 @@
         <h2>COMUNS</h2>
         <div id="items-grid">
             <li>
-                <img src="../assets/cough.png" alt="Tosse Seca" width="100px">
+                <img src="{{ url_for('static', filename='assets/cough.png') }}" alt="Tosse Seca" width="100px">
                 <span>Tosse Seca</span>
             </li>
 
             <li>
-                <img src="../assets/fever.png" alt="Febre" width="100px">
+                <img src="{{ url_for('static', filename='assets/fever.png') }}" alt="Febre" width="100px">
                 <span>Febre</span>
             </li>
 
             <li>
-                <img src="../assets/tired.png" alt="Cansaço" width="100px">
+                <img src="{{ url_for('static', filename='assets/tired.png') }}" alt="Cansaço" width="100px">
                 <span>Cansaço</span>
             </li>
         </div>
@@ -106,39 +70,39 @@
         <h2>MENOS COMUNS</h2>
         <div id="items-grid">
             <li>
-                <img src="../assets/pain.png" alt="Dores e Desconfortos" width="100px">
+                <img src="{{ url_for('static', filename='assets/pain.png') }}" alt="Dores e Desconfortos" width="100px">
                 <span>Dores e Desconfortos</span>
             </li>
 
             <li>
-                <img src="../assets/throat.png" alt="Dor de Garganta" width="100px">
+                <img src="{{ url_for('static', filename='assets/throat.png') }}" alt="Dor de Garganta" width="100px">
                 <span>Dor de Garganta</span>
             </li>
 
             <li>
-                <img src="../assets/diarrhea.png" alt="Diarreia" width="100px">
+                <img src="{{ url_for('static', filename='assets/diarrhea.png') }}" alt="Diarreia" width="100px">
                 <span>Diarreia</span>
             </li>
 
             <li>
-                <img src="../assets/head.png" alt="Dor de Cabeça" width="100px">
+                <img src="{{ url_for('static', filename='assets/head.png') }}" alt="Dor de Cabeça" width="100px">
                 <span>Dor de Cabeça</span>
             </li>
 
             <li>
-                <img src="../assets/conjunctivitis.png" alt="Conjuntivite" width="100px">
+                <img src="{{ url_for('static', filename='assets/conjunctivitis.png') }}" alt="Conjuntivite" width="100px">
                 <span>Conjuntivite</span>
             </li>
 
             <li>
-                <img src="../assets/mouth.png" alt="Perda de Paladar ou Olfato" width="100px">
+                <img src="{{ url_for('static', filename='assets/mouth.png') }}" alt="Perda de Paladar ou Olfato" width="100px">
                 <span>Perda de Paladar ou Olfato</span>
             </li>
 
             <li></li>
 
             <li>
-                <img src="../assets/hand.png" alt="Erupção Cutânea ou Descoloração dos Dedos" width="100px">
+                <img src="{{ url_for('static', filename='assets/hand.png') }}" alt="Erupção Cutânea ou Descoloração dos Dedos" width="100px">
                 <span>Erupção Cutânea ou Descoloração dos Dedos</span>
             </li>
 
@@ -148,17 +112,17 @@
         <h2>GRAVES</h2>
         <div id="items-grid">
             <li>
-                <img src="../assets/asthma.png" alt="Dificuldade de Respirar ou Falta de Ar" width="100px">
+                <img src="{{ url_for('static', filename='assets/asthma.png') }}" alt="Dificuldade de Respirar ou Falta de Ar" width="100px">
                 <span>Dificuldade de Respirar ou Falta de Ar</span>
             </li>
 
             <li>
-                <img src="../assets/chest.png" alt="Dor ou Pressão no Peito" width="100px">
+                <img src="{{ url_for('static', filename='assets/chest.png') }}" alt="Dor ou Pressão no Peito" width="100px">
                 <span>Dor ou Pressão no Peito</span>
             </li>
 
             <li>
-                <img src="../assets/moveless.png" alt="Perda de Fala ou Movimento" width="100px">
+                <img src="{{ url_for('static', filename='assets/moveless.png') }}" alt="Perda de Fala ou Movimento" width="100px">
                 <span>Perda de Fala ou Movimento</span>
             </li>
         </div>
@@ -263,27 +227,5 @@
     </div>
     <!----X----- Prevenção -----X---->
 
-    <button  onclick='backToTop()' id="btnTop"><i class="fas fa-arrow-up"></i></button>
-    <script>
-        /* ---------------------------- BOTÃO VOLTAR AO TOPO ---------------------------- */
-        window.onscroll = function (){
-            scroll();
-        };
-        function scroll() {
-            let btn = document.getElementById('btnTop');
-            if(document.documentElement.scrollTop > 50) {
-                btnTop.style.display = "block";
-            }else{
-                btnTop.style.display = "none";
-            }
-        }
-        function backToTop(){
-            document.documentElement.scrollTop = 0;
-        };
-
-        /* --------------x------------- BOTÃO VOLTAR AO TOPO ------------------x--------- */
-    </script>
-    <script src="../js/main.js"></script>
-    <script src="../js/jquery3.5.1.min.js"></script>
-</body>
-</html>
+    
+    {% endblock %}

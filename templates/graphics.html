@@ -1,0 +1,103 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+
+
+<div class="container">
+    <br>
+    <div class="row"> <div class="col-xs-12 center-block text-center"></div><div
+            class="col-xs-12 center-block text-center"><h1
+                class="text-center">Gráficos</h1></div></div>
+
+    <br>
+    <div class="row d-flex justify-content-center mt-3">
+        <div class="col-md-6 mt-3">
+            <div class="card text-white text-center" color="#000">
+                <div class="card-body">
+                    <h5 class="card-title">SP</h5>
+                    <canvas id="0"></canvas>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="col-md-6 mt-3">
+            <div class="card text-center" color="#000">
+                <div class="card-body text-center">
+                    <h5 class="card-title">BA</h5>
+                    <canvas id="1"></canvas>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="col-md-6 mt-3">
+            <div class="card text-center" color="#000">
+                <div class="card-body">
+                    <h5 class="card-title">MG</h5>
+                    <canvas id="2"></canvas>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="col-md-6 mt-3">
+            <div class="card text-center" color="#000">
+                <div class="card-body">
+                    <h5 class="card-title">RJ</h5>
+                    <canvas id="3"></canvas>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="col-md-6 mt-3">
+            <div class="card text-center" color="#000">
+                <div class="card-body">
+                    <h5 class="card-title">CE</h5>
+                    <canvas id="4"></canvas>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+
+
+        <br>
+        <canvas
+            id="5"></canvas><br><canvas id="6"></canvas><br><canvas id="7"></canvas><br><canvas
+            id="8"></canvas><br><canvas id="9"></canvas><br><canvas id="10"></canvas><br><canvas
+            id="11"></canvas><br><canvas id="12"></canvas><br><canvas id="13"></canvas><br><canvas
+            id="14"></canvas><br><canvas id="15"></canvas><br><canvas id="16"></canvas><br><canvas
+            id="17"></canvas><br><canvas id="18"></canvas><br><canvas id="19"></canvas><br><canvas
+            id="20"></canvas><br><canvas id="21"></canvas><br><canvas id="22"></canvas><br><canvas
+            id="23"></canvas><br><canvas id="24"></canvas><br><canvas id="25"></canvas><br><canvas
+            id="26"></canvas><br>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block script%}
+
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+document.addEventListener("DOMContentLoaded", graphs());
+</script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+<script src="{{ url_for('static', filename='js/graphics.js') }}"></script>
+
+
+{% endblock %}

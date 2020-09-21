@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coronavírus</title>
+        <link rel="stylesheet" href="{{ url_for('static',
+            filename='style/main.css') }}">
+
+        <link rel="stylesheet" href="{{ url_for('static',
+            filename='style/home.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',
+            filename='style/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',
+            filename='style/all.css') }}">
+
+        <!-- Bootstrap core CSS -->
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+        <!-- Material Design Bootstrap -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
+            rel="stylesheet">
+
+
+
+        <nav class="nav">
+            <div class="nav-menu flex-row">
+                <div class="nav-brand">
+                    <a href="#" class="texto-cinza">Projeto</a>
+                </div>
+                <div class="toggle-collapse">
+                    <div class="toggle-icons">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+                <div>
+                    <ul class="nav-itens">
+                        <a href="/" {{active}}>
+                            <li class="nav-link {{active}}"
+                                font-color="#3f4954">
+                                Home
+                            </li>
+                        </a>
+                        <a href="/graficos" {{active2}}>
+                            <li class="nav-link {{active2}}">
+                                Gráficos
+                            </li>
+                        </a>
+
+                        <a href="#">
+                            <li class="nav-link">
+                                Quem somos
+                            </li></a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+    </head>
+    <body>
+
+        {% block body %}{% endblock %}
+        <button onclick='backToTop()' id="btnTop"><i class="fas fa-arrow-up"></i></button>
+        <script src="{{ url_for('static', filename='js/jquery3.5.1.min.js') }}"></script>
+        <script>
+        /* ---------------------------- BOTÃO VOLTAR AO TOPO ---------------------------- */
+        window.onscroll = function (){
+            scroll();
+        };
+        function scroll() {
+            let btn = document.getElementById('btnTop');
+            if(document.documentElement.scrollTop > 50) {
+                btnTop.style.display = "block";
+            }else{
+                btnTop.style.display = "none";
+            }
+        }
+        function backToTop(){
+            document.documentElement.scrollTop = 0;
+        };
+
+        /* --------------x------------- BOTÃO VOLTAR AO TOPO ------------------x--------- */
+    </script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+        {% block script %}
+        {% endblock %}
+    </body>
+</html>
