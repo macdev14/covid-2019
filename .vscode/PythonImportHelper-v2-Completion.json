@@ -1,0 +1,60 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def index():\n    return render_template('index.html',  active=\"active\", active2=\"\")\n@app.route('/graficos')\ndef graphics():\n     return render_template('graphics.html', active=\"\", active2=\"active\")",
+        "detail": "app",
+        "documentation": {
+            "value": "\n```python\nfrom app import index\n```\n\n```python\n\n\n```\n\n```python\ndef index():\n    return render_template('index.html',  active=\"active\", active2=\"\")\n@app.route('/graficos')\ndef graphics():\n     return render_template('graphics.html', active=\"\", active2=\"active\")\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "graphics",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def graphics():\n     return render_template('graphics.html', active=\"\", active2=\"active\")",
+        "detail": "app",
+        "documentation": {
+            "value": "\n```python\nfrom app import graphics\n```\n\n```python\n\n\n```\n\n```python\ndef graphics():\n     return render_template('graphics.html', active=\"\", active2=\"active\")\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\n@app.route('/')\ndef index():\n    return render_template('index.html',  active=\"active\", active2=\"\")\n@app.route('/graficos')\ndef graphics():\n     return render_template('graphics.html', active=\"\", active2=\"active\")",
+        "detail": "app",
+        "documentation": {
+            "value": "\n```python\nfrom app import app\n```\n\n```python\n\n\n```\n\n```python\napp = Flask(__name__)\n@app.route('/')\ndef index():\n    return render_template('index.html',  active=\"active\", active2=\"\")\n@app.route('/graficos')\ndef graphics():\n     return render_template('graphics.html', active=\"\", active2=\"active\")\n```\n",
+            "supportThemeIcons": false
+        }
+    }
+]
